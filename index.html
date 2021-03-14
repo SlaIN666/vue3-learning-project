@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learning Vue.js</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+
+      <div class="cart">Cart ({{ cart.length }})</div>
+
+      <product-display
+        :premium="premium"
+        @add-to-cart="updateCartAdd"
+        @remove-from-cart="updateCartRemove"
+      ></product-display>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script src="/components/ProductDisplay.js"></script>
+
+    <script src="/components/ProductDetails.js"></script>
+
+    <script src="/components/ReviewForm.js"></script>
+
+    <script src="/components/RevewList.js"></script>
+
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
